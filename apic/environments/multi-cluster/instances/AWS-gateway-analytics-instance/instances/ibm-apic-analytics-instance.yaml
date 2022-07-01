@@ -49,7 +49,7 @@ spec:
                   annotations:
                     certmanager.k8s.io/issuer: ingress-issuer
                   hosts:
-                    - name: ac.<your-openshift-domain>
+                    - name: ac.itzroks-6630023d5n-opmobp-6ccd7f378ae819553d37d5f2ee142bd6-0000.eu-gb.containers.appdomain.cloud
                       secretName: analytics-endpoint-secret
               ingestion:
                 enabled: true
@@ -65,18 +65,18 @@ spec:
                   annotations:
                     certmanager.k8s.io/issuer: ingress-issuer
                   hosts:
-                    - name: ai.<your-openshift-domain>
+                    - name: ai.itzroks-6630023d5n-opmobp-6ccd7f378ae819553d37d5f2ee142bd6-0000.eu-gb.containers.appdomain.cloud
                       secretName: analytics-ai-endpoint-secret
               storage:
                 clientAuthEnabled: true
                 data:
                   volumeClaimTemplate:
-                    storageClassName: <your-block-storage-class>
+                    storageClassName: ibmc-block-gold
                     volumeSize: 200Gi
                 enabled: true
                 master:
                   volumeClaimTemplate:
-                    storageClassName: <your-block-storage-class>
+                    storageClassName: ibmc-block-gold
                     volumeSize: 10Gi
                 type: unique
               cronjobs:

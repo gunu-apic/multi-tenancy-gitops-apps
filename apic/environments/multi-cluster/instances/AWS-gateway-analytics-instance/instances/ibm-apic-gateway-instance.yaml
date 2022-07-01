@@ -33,13 +33,13 @@ spec:
                 annotations:
                   certmanager.k8s.io/issuer: ingress-issuer
                 hosts:
-                  - name: gw.<your-openshift-domain>
+                  - name: gw.itzroks-6630023d5n-opmobp-6ccd7f378ae819553d37d5f2ee142bd6-0000.eu-gb.containers.appdomain.cloud
                     secretName: gateway-endpoint-secret
               gatewayManagerEndpoint:
                 annotations:
                   certmanager.k8s.io/issuer: ingress-issuer
                 hosts:
-                  - name: gwmanager.<your-openshift-domain>
+                  - name: gwmanager.itzroks-6630023d5n-opmobp-6ccd7f378ae819553d37d5f2ee142bd6-0000.eu-gb.containers.appdomain.cloud
                     secretName: gateway-manager-endpoint-secret
               apicGatewayServiceTLS:
                 secretName: gateway-service
@@ -53,7 +53,7 @@ spec:
               tokenManagementService:
                 enabled: true
                 storage:
-                  storageClassName: <your-block-storage-class>
+                  storageClassName: ibmc-block-gold
                   volumeSize: 30Gi
               adminUser:
                 secretName: datapower-admin-credentials
